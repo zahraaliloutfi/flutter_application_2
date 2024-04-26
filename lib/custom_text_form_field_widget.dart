@@ -3,21 +3,21 @@ import 'package:flutter/material.dart';
 class CustomTextFormField extends StatelessWidget {
   String? hintText;
   Widget? suffix;
-  bool obscureText;
+
   Function(String)? onChanged;
   CustomTextFormField(
       {super.key,
       this.onChanged,
       this.hintText,
       this.suffix,
-      required this.obscureText});
+    });
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 50,
       child: TextFormField(
         keyboardType: TextInputType.visiblePassword,
-        obscureText: obscureText,
+       
         // keyboardType: TextInputType.emailAddress,
         validator: (data) {
           if (data!.isEmpty) {
